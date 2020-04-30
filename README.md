@@ -1,1 +1,1 @@
-# CocktailApp
+# CocktailApp - Ionic App
