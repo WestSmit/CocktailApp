@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Drinks
+      <ion-badge color="success">{{drinks.length}}</ion-badge>
+    </ion-title>
+    
+    <ion-button slot="end" color="dark" fill="clear" size="small" (click)="toFilters()">
+      <ion-icon name="funnel"></ion-icon>
+    </ion-button>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+
+  <ion-list>
+    <app-cocktail *ngFor="let drink of drinks" [drink]="drink"></app-cocktail>
+  </ion-list>
+
+
+</ion-content>
