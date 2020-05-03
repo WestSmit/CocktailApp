@@ -13,7 +13,7 @@ export class HomePage {
 
   ngOnInit() {
     this.activateRoute.queryParamMap.subscribe(params => {
-      this.data.getDrinks(params).then(data=> { this.drinks = data;});
+      this.data.getDrinks(params).then(data=> this.drinks = data);
     });        
   }
 

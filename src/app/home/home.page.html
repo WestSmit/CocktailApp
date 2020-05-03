@@ -5,7 +5,7 @@
       <ion-badge color="success">{{drinks.length}}</ion-badge>
     </ion-title>
     
-    <ion-button slot="end" color="dark" fill="clear" size="small" (click)="toFilters()">
+    <ion-button slot="end" fill="clear" (click)="toFilters()">
       <ion-icon name="funnel"></ion-icon>
     </ion-button>
     
@@ -18,7 +18,7 @@
   </ion-refresher>
 
 
-  <ion-list>
+  <ion-list lines="none">
     <app-cocktail *ngFor="let drink of drinks" [drink]="drink"></app-cocktail>
   </ion-list>
 

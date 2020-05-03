@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      {{details.strDrink}}
+    </ion-title>    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-img [src]="details.strDrinkThumb"></ion-img>
+  <span>Instruction:</span>
+  <p>{{details.strInstructions}}</p>
+</ion-content>

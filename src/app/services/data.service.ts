@@ -8,6 +8,14 @@ export interface Drink {
   strDrinkThumb: string;
   idDrink: number;
 }
+export class DetailDrink {
+  idDrink: number;
+  strDrink: string;
+  strInstruction: string;
+  strCategory: string;
+  strGlass: string;
+  strAlcoholic: string;
+}
 export interface Category {
   strCategory: string;
 }
@@ -47,6 +55,9 @@ export class DataService {
 
   public async getCategories() {
     return await this.http.get<CategoryResult>(`${environment.apiUrl}list.php?c=list`, {}).toPromise();
+  }
+  public async getDetailInfo(id:number) {
+    return await this.http.get<{drinks: DetailDrink}>(`${environment.apiUrl}lookup.php?i=${id}`, {}).toPromise();
   }
 
 }

@@ -11,6 +11,10 @@ const routes: Routes = [
     loadChildren: () => import('./filter/filter.module').then( m => m.FilterModule)
   },
   {
+    path: 'details',
+    loadChildren: () => import('./cocktail-detail/cocktail-detail.module').then( m => m.CocktailDetailModule)
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'

@@ -1,18 +1,17 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title>
       Filter
     </ion-title>
-    <ion-button color="dark" fill="clear" size="small" (click)="toHome()">
-      <ion-icon name="arrow-back-outline"></ion-icon>
-    </ion-button>
-
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-list>
-    <ion-item *ngFor="let item of checkboxItems"> 
+    <ion-item *ngFor="let item of checkboxItems">
       <ion-label>{{item.value}}</ion-label>
       <ion-checkbox slot="end" [(ngModel)]="item.checked"></ion-checkbox>
     </ion-item>

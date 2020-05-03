@@ -1,13 +1,13 @@
+
 <ion-item *ngIf="drink">
-  <ion-label class="ion-text-wrap">
-    <ion-row>
-      <ion-col>
-        <img src="{{drink.strDrinkThumb}}" alt="">
-      </ion-col>
-      <ion-col>
-        {{drink.strDrink}}
-      </ion-col>
-    </ion-row>
-    
-  </ion-label>
+  <ion-card>
+    <img src="{{drink.strDrinkThumb}}" alt="">
+    <ion-card-header>
+      <ion-card-subtitle>{{drink.idDrink}}</ion-card-subtitle>
+      <ion-card-title>{{drink.strDrink}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button expand="block" size="large" color="primary" (click)="toDetails()">Detail</ion-button>
+    </ion-card-content>
+</ion-card>
 </ion-item>

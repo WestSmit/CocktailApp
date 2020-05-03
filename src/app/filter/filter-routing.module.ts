@@ -3,12 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { FilterPage } from './filter.page';
 
-const routes: Routes = [
-  {
+const routes: Routes = [ {
     path: '',
     component: FilterPage
   }
-
 ];
 
 @NgModule({
