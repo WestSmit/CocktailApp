@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService, Category } from '../services/data.service';
-import { FormGroup } from '@angular/forms';
+import { DataService} from '../services/data.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Category } from '../models/category'
 
 export class CheckboxItem {
   value: string;

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { DetailDrink, DataService } from '../services/data.service';
+import { DataService } from '../services/data.service';
+import { DetailDrink } from '../models/detailDrink';
 
 @Component({
   selector: 'app-cocktail-detail',

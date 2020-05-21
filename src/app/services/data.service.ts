@@ -2,23 +2,10 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { Params, ParamMap } from '@angular/router';
+import {Drink} from '../models/drink';
+import {DetailDrink} from '../models/detailDrink';
+import {Category} from '../models/category';
 
-export interface Drink {
-  strCategory: string;
-  strDrinkThumb: string;
-  idDrink: number;
-}
-export class DetailDrink {
-  idDrink: number;
-  strDrink: string;
-  strInstruction: string;
-  strCategory: string;
-  strGlass: string;
-  strAlcoholic: string;
-}
-export interface Category {
-  strCategory: string;
-}
 export interface DrinkResult {
   drinks: Drink[];
 }
@@ -38,7 +25,7 @@ export class DataService {
     let filters: string[];
 
     if (params.getAll("c").length == 0) {
-      filters = await (await this.getCategories()).drinks.map(x => x.strCategory);      
+      filters = (await this.getCategories()).drinks.map(x => x.strCategory);      
     } else {
       filters = params.getAll("c");      
     }
@@ -49,7 +36,6 @@ export class DataService {
       drinks = drinks.concat(result.drinks);
     }
 
-    console.log("Number of items:", drinks.length)
     return drinks;
   }
 

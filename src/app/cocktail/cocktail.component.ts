@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Drink } from '../services/data.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Drink } from '../models/drink';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cocktail',
@@ -10,7 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class CocktailComponent implements OnInit {
   @Input() drink: Drink;
 
-  constructor(private activatedRoute:ActivatedRoute, private router:Router) { }
+  constructor(private router:Router) { }
 
   ngOnInit() {  }
 

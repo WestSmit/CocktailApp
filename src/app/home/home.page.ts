@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { DataService, Drink} from '../services/data.service';
+import { DataService} from '../services/data.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Drink } from '../models/drink';
 
 @Component({
   selector: 'app-home',
